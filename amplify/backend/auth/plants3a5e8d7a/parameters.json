@@ -45,15 +45,11 @@
             "Arn"
         ]
     },
-    "useDefault": "defaultSocial",
+    "useDefault": "default",
     "hostedUI": true,
     "usernameAttributes": [
         "email"
     ],
-    "hostedUIDomainName": "plants3a5e8d7a-3a5e8d7a",
-    "authProvidersUserPool": [],
-    "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://localhost:3000/\"],\"LogoutURLs\":[\"https://localhost:3000/\"]}",
     "userPoolGroupList": [],
     "dependsOn": []
 }
