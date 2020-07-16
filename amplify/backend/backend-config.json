@@ -1,1 +1,10 @@
-{}
+{
+    "auth": {
+        "plants3a5e8d7a": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [],
+            "customAuth": false
+        }
+    }
+}
