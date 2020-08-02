@@ -5,9 +5,9 @@ function NavigationBar() {
 
     return (
         <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Plant Tracker</Navbar.Brand>
+        <Navbar.Brand>Plant Tracker</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="plants">MyPlants</Nav.Link>
+          <Nav.Link href="plants">My Plants</Nav.Link>
           <Nav.Link href="calendar">Watering Schedule</Nav.Link>
           <Nav.Link href="about">About</Nav.Link>
         </Nav>
