@@ -31,6 +31,8 @@ function PlantCreationForm() {
             withIcon={true}
             buttonText="Choose images"
             onChange={image => setImages(images.concat(image))}
+            imgExtension={['.jpg', '.png']}
+            maxFileSize={5242880}
         />
 
 
