@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 
 import DatePicker from 'react-datepicker';
+import ImageUploader from 'react-images-upload';
 
 import 'react-datepicker/dist/react-datepicker.css'
 
@@ -10,10 +11,11 @@ function PlantCreationForm() {
 
     const [lastWateringDate, setLastWateringDate] = useState<Date | Date[] | null>(new Date())
     const [nextWateringDate, setNextWateringDate] = useState<Date | Date[] | null>(new Date())
+    const [images, setImages] = useState<File[]>([])
 
     return(
         <Form>
-        <Form.Label>Name </Form.Label>
+        <Form.Label>Plant Type</Form.Label>
         <Form.Control></Form.Control>
         <Form.Label>When was the last time it was watered?</Form.Label>
         <br/>
@@ -23,6 +25,15 @@ function PlantCreationForm() {
         <br/>
         <DatePicker value= {nextWateringDate?.toString()} onChange={date => setNextWateringDate(date)} showTimeSelect/>
         <br />
+        <Form.Label> Choose a picture for your plant</Form.Label>
+        <br />
+        <ImageUploader
+            withIcon={true}
+            buttonText="Choose images"
+            onChange={image => setImages(images.concat(image))}
+        />
+
+
         
     </Form>
     )
