@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 import DatePicker from 'react-datepicker';
 import ImageUploader from 'react-images-upload';
@@ -12,6 +12,10 @@ function PlantCreationForm() {
     const [lastWateringDate, setLastWateringDate] = useState<Date | Date[] | null>(new Date())
     const [nextWateringDate, setNextWateringDate] = useState<Date | Date[] | null>(new Date())
     const [images, setImages] = useState<File[]>([])
+
+    const handleFormSubmit = () => {
+        console.log('Image data')
+    }
 
     return(
         <Form>
@@ -34,11 +38,11 @@ function PlantCreationForm() {
             imgExtension={['.jpg', '.png']}
             maxFileSize={5242880}
         />
-
-
-        
+        <Button variant="primary" type="submit" onClick = {handleFormSubmit}>
+            Submit
+        </Button>        
     </Form>
     )
-}
+    }
 
 export default PlantCreationForm
