@@ -7,19 +7,18 @@ interface CreatePlantProps{
     handleHide: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-function CreatePlant({modalOpen, handleHide}: CreatePlantProps) {
-
-    return (
-        <Modal show={modalOpen} onHide = {() => handleHide(false)}>
-        <Modal.Header closeButton>
+function CreatePlant({ modalOpen, handleHide }: CreatePlantProps) {
+  return (
+    <Modal show={modalOpen} onHide={() => handleHide(false)}>
+      <Modal.Header closeButton>
         <Modal.Title>Add a new plant</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            <PlantCreationForm/>
+      </Modal.Header>
+      <Modal.Body>
+        <PlantCreationForm />
 
-        </Modal.Body>
-        </Modal>
-    )
+      </Modal.Body>
+    </Modal>
+  );
 }
 
-export default CreatePlant
+export default CreatePlant;
