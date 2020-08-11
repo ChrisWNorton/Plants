@@ -1,0 +1,7 @@
+type Plant @model {
+  id: ID!
+  name: String!
+  lastWatered: String!
+  nextWatered: String!
+  photo: String!
+}
